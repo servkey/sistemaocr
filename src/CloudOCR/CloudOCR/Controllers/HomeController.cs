@@ -15,14 +15,14 @@ namespace CloudOCR.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Descripción de CloudOCR.";
+            ViewBag.Message = "Your application description page.";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Página de contacto.";
+            ViewBag.Message = "Your contact page.";
 
             return View();
         }
