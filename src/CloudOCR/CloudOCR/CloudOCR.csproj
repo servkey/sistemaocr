@@ -173,14 +173,12 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\UcrController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\ucr.cs" />
-    <Compile Include="Models\UcrContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -195,11 +193,8 @@
     <Content Include="InstallationDummyFile.txt" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Views\Ucr\Create.cshtml" />
-    <Content Include="Views\Ucr\Delete.cshtml" />
-    <Content Include="Views\Ucr\Details.cshtml" />
-    <Content Include="Views\Ucr\Edit.cshtml" />
-    <Content Include="Views\Ucr\Index.cshtml" />
+    <None Include="Properties\PublishProfiles\sistemaocr - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\sistemaocr - Web Deploy.pubxml" />
     <None Include="_bin_deployableAssemblies\x86\sqlcese40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceqp40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceme40.dll" />

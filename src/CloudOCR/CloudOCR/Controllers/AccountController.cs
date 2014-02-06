@@ -53,7 +53,7 @@ namespace CloudOCR.Controllers
                 }
                 else
                 {
-                    ModelState.AddModelError("", "Invalid username or password.");
+                    ModelState.AddModelError("", "Usuario inválido o contraseña inválida.");
                 }
             }
 
