@@ -5,11 +5,14 @@
 <div class="jumbotron">
     <h1><b>CloudOCR</b></h1>
     <h2>Sistema Web OCR para la digitalización de Trabajos Recepcionales</h2>
-    <p class="lead">
+    <p class="lead" style="text-align: justify">
         Primero se necesita iniciar sesión en el sitio para poder acceder a las distintas funcionalidades
         del sistema, si aun no estás inscrito, registrate para disfrutar los beneficios que el sistema te ofrece.
     </p>
-    <p><a href="~/Account/Login" class="btn btn-primary btn-large">Iniciar Sesión &raquo;</a></p>
+    @if (!Request.IsAuthenticated)
+    {
+        <p><a href="~/Account/Login" class="btn btn-primary btn-large">Iniciar Sesión &raquo;</a></p>
+    }
 </div>
 <h2>Herramientas:</h2>
 <div class="row">
