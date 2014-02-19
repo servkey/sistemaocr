@@ -285,3 +285,9 @@ D:\Documents\Visual Studio 2013\Projects\CloudOCR\CloudOCR\bin\es\Microsoft.Owin
 D:\Documents\Visual Studio 2013\Projects\CloudOCR\CloudOCR\obj\Debug\CloudOCR.csprojResolveAssemblyReference.cache
 D:\Documents\Visual Studio 2013\Projects\CloudOCR\CloudOCR\obj\Debug\CloudOCR.dll
 D:\Documents\Visual Studio 2013\Projects\CloudOCR\CloudOCR\obj\Debug\CloudOCR.pdb
+D:\Documents\Visual Studio 2013\Projects\CloudOCR\CloudOCR\bin\System.Net.Http.Formatting.dll
+D:\Documents\Visual Studio 2013\Projects\CloudOCR\CloudOCR\bin\System.Web.Http.dll
+D:\Documents\Visual Studio 2013\Projects\CloudOCR\CloudOCR\bin\System.Web.Http.WebHost.dll
+D:\Documents\Visual Studio 2013\Projects\CloudOCR\CloudOCR\bin\System.Net.Http.Formatting.xml
+D:\Documents\Visual Studio 2013\Projects\CloudOCR\CloudOCR\bin\System.Web.Http.xml
+D:\Documents\Visual Studio 2013\Projects\CloudOCR\CloudOCR\bin\System.Web.Http.WebHost.xml

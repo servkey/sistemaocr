@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Cargar Archivos</title>
+        <meta name="viewport" content="width=device-width" />
+        <link href="~/Content/UploadifyContent/uploadify.css" rel="stylesheet" />
+        <script src="~/Scripts/jquery-1.11.0.js"></script>
+        <script src="~/Content/UploadifyContent/jquery.uploadify.min.js"></script>
+        <script src="~/Scripts/swfobject.js"></script>
+        <script type="text/javascript">
+        $(function () {
+        $('#file_upload').uploadify({
+                    "uploader": '@Url.Action("Upload", "Aplication")',
+                    "swf": '@Url.Content("/Content/UploadifyContent/uploadify.swf")',
+                    "cancelImg": '/Content/UploadifyContent/uploadify-cancel.png',
+                    "auto": true,
+                    "buttonText": "Seleccione imagen",
+                    "scriptData": {},
+                    "multi": true,
+                    "onComplete": function (event, ID, fileObj, response, data) {
+                        var json = jQuery.parseJSON(response);
+                        if (json == 'error') {
+                            $("#error").html('Tipo de archivo no soportado');
+                        }
+                        else {
+                            $("#uploaded").append("<img src='" + data + "' alt='Uploaded Image' />")
+                        }
+                    }
+                });
+            });
+        </script>
+</head>
+<body>
+    <div>
+        <input type="file" name="file_upload" id="file_upload" />
+    </div>
+    <div id="uploaded">
+
+    </div>
+</body>
+</html>

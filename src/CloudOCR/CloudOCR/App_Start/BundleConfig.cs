@@ -14,6 +14,19 @@ namespace CloudOCR
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
 
+            bundles.Add(new ScriptBundle("~/bundles/swfobject").Include(
+                        "~/Scripts/swfobject.js"));
+
+            bundles.Add(new ScriptBundle("~/Content/UploadifyContent/jquery-uplodify").Include(
+                        "~/Content/UploadifyContent/jquery.uploadify.js"));
+
+            bundles.Add(new ScriptBundle("~/Content/UploadifyContent/jquery-uplodify-min").Include(
+                        "~/Content/UploadifyContent/jquery.uploadify.min.js"));
+
+            bundles.Add(new ScriptBundle("~/Content/UploadifyContent/CSSuplodify").Include(
+                        "~/Content/UploadifyContent/uploadify.css"));
+
+
             // Utilice la versión de desarrollo de Modernizr para desarrollar y obtener información sobre los formularios. De este modo, estará
             // preparado para la producción y podrá utilizar la herramienta de compilación disponible en http://modernizr.com para seleccionar solo las pruebas que necesite.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
