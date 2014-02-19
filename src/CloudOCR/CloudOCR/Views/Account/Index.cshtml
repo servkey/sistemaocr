@@ -6,7 +6,7 @@
 
 <h2>Index</h2>
 <p>
-    @Html.ActionLink("Create New", "Register")
+    @Html.ActionLink("Crear Nuevo", "Register")
 </p>
 <table class="table">
     <tr>
@@ -40,9 +40,9 @@
                 @Html.DisplayFor(modelItem => item.Email)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.UserName }) |
-                @Html.ActionLink("Roles", "UserRoles", new { id = item.UserName }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.UserName })
+                @Html.ActionLink("Editar", "Edit", new { id = item.UserName }) |
+                @Html.ActionLink("Cambiar Tipo de usuario", "UserRoles", new { id = item.UserName }) |
+                @Html.ActionLink("Borrar Usuario", "Delete", new { id = item.UserName })
             </td>
         </tr>
     }
