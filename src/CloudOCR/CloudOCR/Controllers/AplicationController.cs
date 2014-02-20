@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CloudOCR.Models;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Web;
@@ -23,6 +24,30 @@ namespace CloudOCR.Controllers
         public ActionResult editUser()
         {
             return View();
+        }
+
+        public ActionResult FileUpload(HttpPostedFileBase file)
+        {
+
+            if (file != null)
+            {
+                ApplicationDbContext db = new ApplicationDbContext();
+                string ImageName = System.IO.Path.GetFileName(file.FileName);
+                string physicalPath = Server.MapPath("~/images/" + ImageName);
+
+                // save image in folder
+                file.SaveAs(physicalPath);
+
+                //save new record in database
+                PicturesViewModel newRecord = new PicturesViewModel();
+                newRecord.flName = ImageName;
+                newRecord.url = physicalPath;
+                db.PicturesSet.Add(newRecord);
+                db.SaveChanges();
+
+            }
+            //Display records
+            return RedirectToAction("../Aplication/Aplicacion/");
         }
 
         public ActionResult Upload()

@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
   <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultValue="Server=tcp:j5adimna6c.database.windows.net,1433;Database=DBOCR;User ID=ocr;Password=1d4oam.de.3@;Trusted_Connection=False;Encrypt=True;Connection Timeout=30" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="D:\\sistemaocr\\src\\CloudOCR\\CloudOCR\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+    <parameterEntry kind="XmlFile" scope="D:\\Documents\\Visual\ Studio\ 2013\\Projects\\CloudOCR\\CloudOCR\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="CloudOCR.DBOCREntities-Web.config Connection String" description="CloudOCR.DBOCREntities Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultValue="CloudOCR.DBOCREntities_ConnectionString" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\Documents\\Visual\ Studio\ 2013\\Projects\\CloudOCR\\CloudOCR\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='CloudOCR.DBOCREntities']/@connectionString" />
   </parameter>
 </parameters>

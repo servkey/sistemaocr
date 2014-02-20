@@ -2,6 +2,7 @@
 using Microsoft.AspNet.Identity.EntityFramework;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Data.Entity;
 
 namespace CloudOCR.Models
 {
@@ -31,6 +32,8 @@ namespace CloudOCR.Models
             : base("DefaultConnection")
         {
         }
+
+        public virtual DbSet<PicturesViewModel> PicturesSet { get; set; }
     }
 
     public class IdentityManager

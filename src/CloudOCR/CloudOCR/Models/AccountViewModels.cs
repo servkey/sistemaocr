@@ -97,18 +97,23 @@ namespace CloudOCR.Models
         }
 
         [Required]
+        [DataType(DataType.Text)]
         [Display(Name = "Nombre de Usuario")]
         public string UserName { get; set; }
 
         [Required]
+        [DataType(DataType.Text)]
         [Display(Name = "Nombre")]
         public string FirstName { get; set; }
 
         [Required]
+        [DataType(DataType.Text)]
         [Display(Name = "Apellido")]
         public string LastName { get; set; }
 
         [Required]
+        [DataType(DataType.EmailAddress)]
+        [Display(Name = "Correo Electrónico")]
         public string Email { get; set; }
     }
 
@@ -169,5 +174,14 @@ namespace CloudOCR.Models
 
         [Required]
         public string RoleName { get; set; }
+    }
+
+    public partial class PicturesViewModel
+    {
+        public int Id { get; set; }
+        public string flName { get; set; }
+        public string url { get; set; }
+        public string AspNetUsersId { get; set; }
+
     }
 }

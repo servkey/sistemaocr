@@ -336,6 +336,7 @@
   <ItemGroup>
     <Folder Include="App_Data\Images\" />
     <Folder Include="Content\Images\" />
+    <Folder Include="images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
