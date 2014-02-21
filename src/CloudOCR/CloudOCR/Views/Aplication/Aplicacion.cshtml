@@ -1,14 +1,14 @@
 ﻿@{
     ViewBag.Title = "Index";
+    string user = @User.Identity.Name;
 }
 
-@using (Html.BeginForm("FileUpload", "Aplication", FormMethod.Post,
-                    new { enctype = "multipart/form-data" }))
+@using (Html.BeginForm("FileUpload", "Aplication", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     <div>
         <br />
-        Image<br />
-        <input type="file" name="file" id="file" style="width: 100%;" /> <br />
+        Seleccione las imágenes<br />
+        <input type="file" name="files" id="files" style="width: 100%;" multiple/> <br />
         <input type="submit" value="Upload" class="submit" />
     </div>
 }
@@ -24,55 +24,14 @@
 {
     <table border="1">
         <tbody>
+            
             @foreach (var item in db.PicturesSet)
             {
-                <tr>
-                    <td> <img src="~/images/@item.flName" width="100" height="100" /></td>
-                </tr>
+                    <tr>
+                        <td> <img src="~/Content/Images/@item.flName" width="200" height="300" /></td>
+                    </tr>
+                
             }
         </tbody>
     </table>
 }
-<!DOCTYPE html>
-<html>
-<head>
-        <title>Cargar Archivos</title>
-        <meta name="viewport" content="width=device-width" />
-        <link href="~/Content/UploadifyContent/uploadify.css" rel="stylesheet" />
-        <script src="~/Scripts/jquery-1.11.0.js"></script>
-        <script src="~/Content/UploadifyContent/jquery.uploadify.min.js"></script>
-        <script src="~/Scripts/swfobject.js"></script>
-        <script type="text/javascript">
-        $(function () {
-        $('#file_upload').uploadify({
-                    "uploader": '@Url.Action("Upload", "Aplication")',
-                    "swf": '@Url.Content("/Content/UploadifyContent/uploadify.swf")',
-                    "cancelImg": '/Content/UploadifyContent/uploadify-cancel.png',
-                    "auto": true,
-                    "buttonText": "Seleccione imagen",
-                    "scriptData": {},
-                    "multi": true,
-                    "onComplete": function (event, ID, fileObj, response, data) {
-                        var json = jQuery.parseJSON(response);
-                        if (json == 'error') {
-                            $("#error").html('Tipo de archivo no soportado');
-                        }
-                        else {
-                            $("#uploaded").append("<img src='" + data + "' alt='Uploaded Image' />")
-                        }
-                    }
-                });
-            });
-        </script>
-</head>
-<body>
-    <div>
-        <input type="file" name="file_upload" id="file_upload" />
-    </div>
-    <div id="uploaded">
-
-    </div>
-</body>
-
-
-</html>

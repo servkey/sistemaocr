@@ -23,13 +23,13 @@ namespace CloudOCR.Migrations
             bool success = false;
 
             var idManager = new IdentityManager();
-            success = idManager.CreateRole("Admin");
+            success = idManager.CreateRole("Administrador");
             if (!success == true) return success;
 
-            success = idManager.CreateRole("CanEdit");
+            success = idManager.CreateRole("PermisoEdicion");
             if (!success == true) return success;
 
-            success = idManager.CreateRole("User");
+            success = idManager.CreateRole("Usuario");
             if (!success) return success;
 
 
@@ -47,13 +47,13 @@ namespace CloudOCR.Migrations
             success = idManager.CreateUser(newUser, "123456**");
             if (!success) return success;
 
-            success = idManager.AddUserToRole(newUser.Id, "Admin");
+            success = idManager.AddUserToRole(newUser.Id, "Administrador");
             if (!success) return success;
 
-            success = idManager.AddUserToRole(newUser.Id, "CanEdit");
+            success = idManager.AddUserToRole(newUser.Id, "PermisoEdicion");
             if (!success) return success;
 
-            success = idManager.AddUserToRole(newUser.Id, "User");
+            success = idManager.AddUserToRole(newUser.Id, "Usuario");
             if (!success) return success;
 
             return success;

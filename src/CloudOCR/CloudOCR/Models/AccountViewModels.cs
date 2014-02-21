@@ -40,11 +40,11 @@ namespace CloudOCR.Models
 
     public class RegisterViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "El nombre de usuario es necesario para el registro")]
         [Display(Name = "Nombre de usuario")]
         public string UserName { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "La contraseña es necesaria para el registro")]
         [StringLength(100, ErrorMessage = "El número de caracteres de {0} debe ser al menos {2}.", MinimumLength = 6)]
         [DataType(DataType.Password)]
         [Display(Name = "Contraseña")]
@@ -65,8 +65,9 @@ namespace CloudOCR.Models
         [Display(Name = "Apellido")]
         public string LastName { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "El correo electrónico es necesario para el registro")]
         [DataType(DataType.EmailAddress)]
+        [EmailAddress(ErrorMessage = "No es un correo electrónico válido")]
         [Display(Name = "Correo Electrónico")]
         public string Email { get; set; }
 
@@ -96,9 +97,8 @@ namespace CloudOCR.Models
             this.Email = user.Email;
         }
 
-        [Required]
-        [DataType(DataType.Text)]
-        [Display(Name = "Nombre de Usuario")]
+        [Required(ErrorMessage = "El nombre de usuario es necesario para el registro")]
+        [Display(Name = "Nombre de usuario")]
         public string UserName { get; set; }
 
         [Required]
@@ -111,8 +111,9 @@ namespace CloudOCR.Models
         [Display(Name = "Apellido")]
         public string LastName { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "El correo electrónico es necesario para el registro")]
         [DataType(DataType.EmailAddress)]
+        [EmailAddress(ErrorMessage = "No es un correo electrónico válido")]
         [Display(Name = "Correo Electrónico")]
         public string Email { get; set; }
     }

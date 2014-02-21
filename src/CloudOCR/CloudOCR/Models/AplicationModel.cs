@@ -9,5 +9,11 @@ namespace CloudOCR.Models
     public class AplicationModel
     {
         
+        
+    }
+
+    public class Picture
+    {
+        public IEnumerable<HttpPostedFile> Files { get; set; }
     }
 }

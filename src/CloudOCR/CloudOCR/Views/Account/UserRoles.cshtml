@@ -4,7 +4,7 @@
     ViewBag.Title = "Cambiar Rol";
 }
 
-<h2>Roles for user @Html.DisplayFor(model => model.UserName)</h2>
+<h2>Roles disponibles para el usuario @Html.DisplayFor(model => model.UserName)</h2>
 <hr />
 
 @using (Html.BeginForm("UserRoles", "Account", FormMethod.Post, new { encType = "multipart/form-data", name = "myform" }))
@@ -18,16 +18,16 @@
                 @Html.HiddenFor(model => model.UserName)
             </div>
         </div>
-        <h4>Select Role Assignments</h4>
+        <h4>Selecciona el rol o roles que deseas asignar a este usuario</h4>
         <br />
         <hr />
         <table>
             <tr>
                 <th>
-                    Select
+                    Selecciona
                 </th>
                 <th>
-                    Role
+                    Rol(es)
                 </th>
             </tr>
             @Html.EditorFor(model => model.Roles)
@@ -36,7 +36,7 @@
         <hr />
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="Guardar" class="btn btn-default" />
             </div>
         </div>
     </div>
