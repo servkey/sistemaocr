@@ -8,8 +8,13 @@
     <div>
         <br />
         Seleccione las imágenes<br />
-        <input type="file" name="files" id="files" style="width: 100%;" multiple/> <br />
-        <input type="submit" value="Upload" class="submit" />
+        <span class="btn">Upload<input type="file" name="files" id="files" style="width: 100%;" multiple /></span>
+        <span><button type="submit" class="btn btn-primary"> Cargar Imágenes </button></span>
+    </div>
+    <div class="progress progress-striped active">
+      <div class="progress-bar"  role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+          <span class ="sr-only">45% Complete</span>
+      </div>
     </div>
 }
 
@@ -22,6 +27,7 @@
 }
 @using (Html.BeginForm())
 {
+    
     <table border="1">
         <tbody>
             

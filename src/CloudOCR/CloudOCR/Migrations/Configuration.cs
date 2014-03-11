@@ -1,6 +1,5 @@
 namespace CloudOCR.Migrations
 {
-    using CloudOCR.Models;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -13,7 +12,7 @@ namespace CloudOCR.Migrations
             AutomaticMigrationsEnabled = true;
         }
 
-        protected override void Seed(ApplicationDbContext context)
+        protected override void Seed(CloudOCR.Models.ApplicationDbContext context)
         {
             this.AddUserAndRoles();
         }
@@ -22,7 +21,7 @@ namespace CloudOCR.Migrations
         {
             bool success = false;
 
-            var idManager = new IdentityManager();
+            var idManager = new CloudOCR.Models.IdentityManager();
             success = idManager.CreateRole("Administrador");
             if (!success == true) return success;
 
@@ -33,7 +32,7 @@ namespace CloudOCR.Migrations
             if (!success) return success;
 
 
-            var newUser = new ApplicationUser()
+            var newUser = new CloudOCR.Models.ApplicationUser()
             {
                 UserName = "RSalas",
                 FirstName = "Rene",

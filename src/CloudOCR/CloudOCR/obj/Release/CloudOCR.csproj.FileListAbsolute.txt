@@ -134,7 +134,6 @@ D:\Documents\Visual Studio 2013\Projects\CloudOCR\CloudOCR\bin\Microsoft.Web.Inf
 D:\Documents\Visual Studio 2013\Projects\CloudOCR\CloudOCR\bin\Newtonsoft.Json.dll
 D:\Documents\Visual Studio 2013\Projects\CloudOCR\CloudOCR\bin\Owin.dll
 D:\Documents\Visual Studio 2013\Projects\CloudOCR\CloudOCR\bin\System.Data.SqlServerCe.dll
-D:\Documents\Visual Studio 2013\Projects\CloudOCR\CloudOCR\bin\System.Data.SqlServerCe.Entity.dll
 D:\Documents\Visual Studio 2013\Projects\CloudOCR\CloudOCR\bin\System.Net.Http.Formatting.dll
 D:\Documents\Visual Studio 2013\Projects\CloudOCR\CloudOCR\bin\System.Web.Helpers.dll
 D:\Documents\Visual Studio 2013\Projects\CloudOCR\CloudOCR\bin\System.Web.Http.dll
@@ -195,5 +194,5 @@ D:\Documents\Visual Studio 2013\Projects\CloudOCR\CloudOCR\bin\es\Microsoft.Owin
 D:\Documents\Visual Studio 2013\Projects\CloudOCR\CloudOCR\obj\Release\CloudOCR.dll
 D:\Documents\Visual Studio 2013\Projects\CloudOCR\CloudOCR\obj\Release\CloudOCR.pdb
 D:\Documents\Visual Studio 2013\Projects\CloudOCR\CloudOCR\obj\Release\CloudOCR.csprojResolveAssemblyReference.cache
-D:\Documents\Visual Studio 2013\Projects\CloudOCR\CloudOCR\obj\Release\CloudOCR.Migrations.Init.resources
+D:\Documents\Visual Studio 2013\Projects\CloudOCR\CloudOCR\obj\Release\CloudOCR.Migrations.Initial.resources
 D:\Documents\Visual Studio 2013\Projects\CloudOCR\CloudOCR\obj\Release\CloudOCR.csproj.GenerateResource.Cache
