@@ -26,26 +26,28 @@ namespace CloudOCR.Controllers
             return View();
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult FileUpload(IEnumerable<HttpPostedFileBase> files)
         {
             foreach (var file in files)
-            if (file != null)
-            {
-                ApplicationDbContext db = new ApplicationDbContext();
-                string ImageName = System.IO.Path.GetFileName(file.FileName);
-                string physicalPath = Server.MapPath("~/Content/Images/" + ImageName);
+                 if (file != null)          
+                {
+                    ApplicationDbContext db = new ApplicationDbContext();
+                    string ImageName = System.IO.Path.GetFileName(file.FileName);
+                    string physicalPath = Server.MapPath("~/Content/Images/" + ImageName);
 
-                // save image in folder
-                file.SaveAs(physicalPath);
+                    // save image in folder
+                    file.SaveAs(physicalPath);
 
-                //save new record in database
-                PicturesViewModel newRecord = new PicturesViewModel();
-                newRecord.flName = ImageName;
-                newRecord.url = physicalPath;
-                db.PicturesSet.Add(newRecord);
-                db.SaveChanges();
+                    //save new record in database
+                    PicturesViewModel newRecord = new PicturesViewModel();
+                    newRecord.flName = ImageName;
+                    newRecord.url = physicalPath;
+                    db.PicturesSet.Add(newRecord);
+                    db.SaveChanges();
 
-            }
+                }
             //Display records
             return RedirectToAction("../Aplication/Aplicacion/");
         }
