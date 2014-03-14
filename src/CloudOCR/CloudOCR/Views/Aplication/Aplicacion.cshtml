@@ -11,46 +11,57 @@
 @using (Ajax.BeginForm("FileUpload", "Aplication", new AjaxOptions() { HttpMethod = "POST" }, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
+    <div class="container">
+        <div class="content">
+            <div class="row"  >
+                <div class="col-md-2">
+                    <br />
+                    <div class="scrollable-table">
+                        <table >
+                            <tbody>
+                                @foreach (var item in db.PicturesSet)
+                                {
+                                    <tr>
+                                        <td> <img src="~/Content/Images/@item.flName" width="150" height="200" /></td>
+                                    </tr>
 
-    <div class="fileinput fileinput-new" data-provides="fileinput">
-        <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 400px; height: 500px;"></div>
-        <div>
-            <span class="btn btn-default btn-file"><span class="fileinput-new">Seleccionar imagen</span>
-            <span class="fileinput-exists">Cambiar</span><input type="file" name="..."></span>
-            <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Quitar</a>
-        </div>
-    </div>
+                                }
+                            </tbody>
+                        </table>
+                    </div>                    
+                </div>
+                <div class="col-md-6">
+                    <div class="overhid">
+                        <table border="1" width="500" height="600">
+                            <tbody>
+                                @foreach (var item in db.PicturesSet)
+                                {
+                                    <tr>
+                                        <td> <img src="~/Content/Images/@item.flName" width="500" height="600" /></td>
+                                    </tr>
 
-    <div>
-        Seleccione las imágenes<br />
-        <input type="file" name="files" id="files" style="width: 100%;" multiple /><br>
-        <span><button type="submit" class="btn btn-primary"> Cargar Imágenes </button></span>
-    </div>
-}
-<br />
-<div class="progress progress-striped active">
-    <div class="progress-bar" role="progressbar" style="width: 0%">
-        <div class="sr-only">0%</div>
-    </div>
-</div>
-<div id="status"></div>
-
-
-@using (Html.BeginForm())
-{
+                                }
+                            </tbody>
+                        </table>
+                    </div>                    
+                </div>
+                <div class="col-md-4">
+                            Seleccione las imágenes<br />
+                            <input type="file" name="files" id="files" style="width: 100%;" multiple /><br>
+                            <button type="submit" class="btn btn-primary"> Cargar Imágenes </button>
+                            <div class="progress progress-striped active">
+                                <div class="progress-bar" role="progressbar" style="width: 0%">
+                                    <div class="sr-only">0%</div>
+                                </div>
+                            </div>
+                            <div id="status"></div>
+                </div>
+           </div>
+        </div>            
+   </div>
     
-    <table border="1">
-        <tbody>
-            
-            @foreach (var item in db.PicturesSet)
-            {
-                    <tr>
-                        <td> <img src="~/Content/Images/@item.flName" width="200" height="300" /></td>
-                    </tr>
-                
-            }
-        </tbody>
-    </table>
+
+    
 }
 
 <script>

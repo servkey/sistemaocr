@@ -29,6 +29,7 @@ namespace CloudOCR
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap-theme.css",
                       "~/Content/jasny-bootstrap.css",
+                      "~/Content/cloudOCR.css",
                       "~/Content/site.css"));
         }
     }
